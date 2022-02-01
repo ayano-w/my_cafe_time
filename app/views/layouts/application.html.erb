@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyCafeTime</title>
+    <title>マイカフェタイム</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <script src="https://kit.fontawesome.com/6d82a2f4b5.js" crossorigin="anonymous"></script>  </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col mx-auto">
-          <%= yield %>
-        </div>
+    <%= render 'layouts/header' %>
+    <main>
+      <div class="notice"><%= notice %>
       </div>
-    </div>
+        <div class="container">
+          <div class="row">
+            <div class="col mx-auto">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+    </main>
   </body>
 </html>
