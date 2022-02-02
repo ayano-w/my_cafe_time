@@ -1,11 +1,9 @@
+<h3 class="title"><%= link_to root_path, class: "title_link" do %>マイカフェタイム<% end %></h3>
+
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#98605e" >
-
-
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand px-3" href="/">マイカフェタイム</a>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="navbar-item">
@@ -23,6 +21,7 @@
       <li class="navbar-item">
         <%= link_to '会社カフェ', caves_path, class: 'nav-link active' %>
       </li>
+    </ul>
 
     <ul class="navbar-nav d-flex ms-auto">
     <% if user_signed_in? %>

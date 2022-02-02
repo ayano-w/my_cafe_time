@@ -28,6 +28,22 @@ h3{
   text-align: center;
 }
 
+// ヘッダー関連
+.title_link{
+  text-decoration: none;
+  color: #f8f4e6 ;
+  bottom: 0;
+}
+.title{
+  background-color: #b33e5c;
+}
+
+.footer{
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+}
+
 
 // トップページ関連
 .top{
