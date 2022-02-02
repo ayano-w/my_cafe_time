@@ -1,2 +1,7 @@
-<h1>Caves#edit</h1>
-<p>Find me in app/views/caves/edit.html.erb</p>
+<div class="row p-3 mx-auto">
+  <h3>マイカフェ編集</h3>
+</div>
+
+<div class="row p-3 mx-auto">
+  <%= render 'form', cafe: @cafe, method: :patch, submit: '更新' %>
+</div>

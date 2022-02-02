@@ -13,12 +13,14 @@ class CavesController < ApplicationController
   end
 
   def index
+    @cafes = Cafe.all
   end
 
   def show
   end
 
   def edit
+    @cafe = Cafe.find(params[:id])
   end
 
   def update

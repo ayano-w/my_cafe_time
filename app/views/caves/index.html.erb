@@ -1,0 +1,16 @@
+<div class="row p-3 mx-auto">
+  <h3>一覧</h3>
+</div>
+
+<div class="row card-deck">
+  <% @cafes.each do |cafe| %>
+  <div class="card m-3 w-md-20 w-sm-80">
+      <%= attachment_image_tag cafe, :tea_image %>
+    <div class="card-body">
+      <h4 class="card-title"><%= cafe.tea %><small class="card_subtitle">  with <%= cafe.teacake %></small></h4>
+
+      <p class="card-text"><%= cafe.comment %></p>
+  </div>
+</div>
+  <% end %>
+</div>
