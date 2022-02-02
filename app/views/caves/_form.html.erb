@@ -2,14 +2,6 @@
   <div class="row">
     <small class="col-12 p-3 text-center">*は必須項目です</small>
     <div class="form-group col-md-7 col-sm-12 mx-auto p-3">
-      <%= f.label :tea, "*飲み物(15文字まで)" %>
-      <%= f.text_field :tea, class: "form-control" %>
-    </div>
-    <div class="form-group col-md-7 col-sm-12 mx-auto p-3">
-      <%= f.label :teacake, "お茶のお供(15文字まで)" %>
-      <%= f.text_field :teacake, class: "form-control" %>
-    </div>
-    <div class="form-group col-md-7 col-sm-12 mx-auto p-3">
       <%= f.label :category_id , "*カテゴリー" %>
       <%= f.collection_select :category_id, Category.all, :id, :category, class: "form-control select-form" %>
     </div>
@@ -17,6 +9,14 @@
     <div class="form-group col-md-7 col-sm-12 mx-auto p-3">
       <%= f.label :tea_image_id, "*写真" %>
       <%= f.attachment_field :tea_image, class: "form-control" %>
+    </div>
+    <div class="form-group col-md-7 col-sm-12 mx-auto p-3">
+      <%= f.label :tea, "*飲み物(15文字まで)" %>
+      <%= f.text_field :tea, class: "form-control" %>
+    </div>
+    <div class="form-group col-md-7 col-sm-12 mx-auto p-3">
+      <%= f.label :teacake, "お茶のお供(15文字まで)" %>
+      <%= f.text_field :teacake, class: "form-control" %>
     </div>
     <div class="form-group col-md-7 col-sm-12 mx-auto p-3">
       <%= f.label :comment, "一言メッセージあればどうぞ(30文字まで)" %>

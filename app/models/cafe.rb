@@ -1,5 +1,6 @@
 class Cafe < ApplicationRecord
   belongs_to :user
+  belongs_to :category
   attachment :tea_image
   validates :tea, presence: true, length: { maximum: 15 }
   validates :teacake, length: { maximum: 15 }
