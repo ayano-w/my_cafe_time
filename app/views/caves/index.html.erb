@@ -2,4 +2,12 @@
   <h3>一覧</h3>
 </div>
 
-<%= render 'card', cafes: @cafes %>
+
+<div class="card-list-container">
+  <% @cafes.each do |cafe| %>
+
+    <%= render 'card', cafe: cafe %>
+
+  <% end %>
+</div>
+

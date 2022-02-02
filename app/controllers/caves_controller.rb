@@ -17,6 +17,7 @@ class CavesController < ApplicationController
   end
 
   def show
+    @cafe = Cafe.find(params[:id])
   end
 
   def edit
