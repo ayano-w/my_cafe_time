@@ -16,6 +16,7 @@
 
 @import "bootstrap";
 
+// 全体設定
 html, body{
   background-color: #f8f4e6;
   color:#6f5436;
@@ -26,6 +27,19 @@ h1{
 }
 h3{
   text-align: center;
+}
+
+.notice{
+  background-color: #fffff9;
+  font-weight:  bold;
+}
+
+.link{
+  text-decoration: none;
+  color: #bb5548 ;
+}
+.link:hover {
+  color: #e3acae;
 }
 
 // ヘッダー関連
