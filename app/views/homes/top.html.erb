@@ -1,5 +1,9 @@
 <div class="row p-5 mx-auto">
-    <h1>マイカフェタイムへようこそ<i class="fas fa-coffee"><i class="fas fa-cookie-bite"></i></i></h1>
+  <h1>マイカフェタイムへようこそ
+    <small>
+      <i class="fas fa-coffee"><i class="fas fa-cookie-bite"></i></i>
+    </small>
+  </h1>
 </div>
 <div class="row p-3 mx-auto">
   <span class="top">
@@ -7,4 +11,10 @@
   お出かけでも、おうちでも、会社でも、どこかでほっとした時間があると思います<br>
   お気に入りを見つけて、真似してみましょう
   </span>
+</div>
+
+<div class="row p-3 mx-auto">
+  <%= link_to new_cafe_path, class: "btn btn-light" do %>
+    投稿する
+  <% end %>
 </div>

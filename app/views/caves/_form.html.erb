@@ -1,0 +1,35 @@
+<%= form_with model: cafe, method: method, local:true do |f| %>
+  <div class="row">
+    <small class="col-12 p-3 text-center">*は必須項目です</small>
+    <div class="form-group col-md-7 col-sm-12 mx-auto p-3">
+      <%= f.label :tea, "飲み物*" %>
+      <%= f.text_field :tea, class: "form-control" %>
+    </div>
+    <div class="form-group col-md-7 col-sm-12 mx-auto p-3">
+      <%= f.label :teacake, "お茶のお供" %>
+      <%= f.text_field :teacake, class: "form-control" %>
+    </div>
+    <div class="form-group col-md-7 col-sm-12 mx-auto p-3">
+      <%= f.label :tea_image_id, "写真*" %>
+      <%= f.text_field :tea_image_id, class: "form-control" %>
+    </div>
+    <div class="form-group col-md-7 col-sm-12 mx-auto p-3">
+      <%= f.label :comment, "一言メッセージあればどうぞ" %>
+      <%= f.text_field :comment, class: "form-control" %>
+    </div>
+
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-7 col-sm-12 mx-auto p-3">
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.submit submit, class: "btn btn-secondary" %>
+
+      <!--editアクションのときのみ、削除ボタンが表示される-->
+      <% if controller.action_name == "edit" %>
+      　<%= link_to "削除", cafe_path(cafe), method: :delete, class: "btn btn-danger" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
