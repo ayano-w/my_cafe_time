@@ -30,6 +30,6 @@ class CavesController < ApplicationController
   private
 
   def cafe_params
-    params.require(:cafe).permit(:user_id, :category_id, :tea, :teacake, :tea_image_id, :comment)
+    params.require(:cafe).permit(:user_id, :category_id, :tea, :teacake, :tea_image, :comment)
   end
 end

@@ -67,3 +67,5 @@ gem 'jquery-rails'
 gem 'rails-i18n', '~> 5.1'
 gem 'dotenv-rails'
 gem 'bootstrap'
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
