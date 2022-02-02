@@ -1,5 +1,5 @@
   <%= link_to cafe_path(cafe) do %>
-  <div class="card m-5 mx-auto shadow", style="width: 30rem" >
+  <div class="card m-5 mx-auto shadow", style="width: 30rem", id="cafe_<%= cafe.id %>" >
     <%= attachment_image_tag cafe, :tea_image, class: "card-img-top" %>
    <% end %>
 
@@ -17,7 +17,7 @@
             <i class="fas fa-edit"></i>編集
           <% end %>
         <% else %>
-          <p>♡</p>
+          <%= render "favorites/favorite_btn", cafe: cafe %>
         <% end %>
         </div>
       </div>
