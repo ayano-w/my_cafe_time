@@ -8,5 +8,12 @@
 
 # カテゴリー初期値
 Category.create!([
-  {category: "おうちカフェ"}, {category: "街カフェ"}, {category: "自然カフェ"}, {category: "仕事カフェ"}
+  {category: "おうちでカフェ"}, {category: "アウトドアでカフェ"}, {category: "仕事でカフェ"}
 ])
+
+# テストユーザー
+User.create!(
+    name: "test1",
+    password: "password",
+    email: "test1@test1"
+)

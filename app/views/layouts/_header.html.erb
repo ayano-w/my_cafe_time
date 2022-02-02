@@ -1,6 +1,6 @@
-<h3 class="title"><%= link_to root_path, class: "title_link" do %>マイカフェタイム<% end %></h3>
+<h3 class="title"><%= link_to root_path, class: "title_link" do %><%= image_tag 'cafe_logo.png' %><% end %></h3>
 
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#98605e" >
+<nav class="navbar navbar-dark" style="background-color:#98605e" >
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -10,16 +10,13 @@
         <%= link_to 'マイページ', mypage_path(current_user), class: 'nav-link active' %>
       </li>
       <li class="navbar-item">
-        <%= link_to 'おうちカフェ', caves_path, class: 'nav-link active' %>
+        <%= link_to 'おうちでカフェ', caves_path, class: 'nav-link active' %>
       </li>
       <li class="navbar-item">
-        <%= link_to '街カフェ', caves_path, class: 'nav-link active' %>
+        <%= link_to 'アウトドアでカフェ', caves_path, class: 'nav-link active' %>
       </li>
       <li class="navbar-item">
-        <%= link_to '自然カフェ', caves_path, class: 'nav-link active' %>
-      </li>
-      <li class="navbar-item">
-        <%= link_to '会社カフェ', caves_path, class: 'nav-link active' %>
+        <%= link_to '仕事でカフェ', caves_path, class: 'nav-link active' %>
       </li>
     </ul>
 
