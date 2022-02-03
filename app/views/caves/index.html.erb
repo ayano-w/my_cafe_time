@@ -1,6 +1,30 @@
-<div class="card-list-container">
-  <% @cafes.each do |cafe| %>
-    <%= render 'card', cafe: cafe %>
-  <% end %>
+<div class="row p-3 mx-auto">
+
+  <div class="col-lg-3 col-10 mx-auto mt-5">
+    <div class="row p-1 mx-auto text-center border-bottom">
+      <h5>カテゴリー</h5>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-4 mr-auto py-2">おうちでかふぇ</div>
+      <div class="col-md-8 col-4 mr-auto">アウトドアでカフェ</div>
+      <div class="col-md-8 col-4 mr-auto">仕事でカフェ</div>
+    </div>
+
+  </div>
+
+
+
+<!--ユーザーの投稿一覧-->
+  <div class="col-lg-9 col-12">
+    <div class="card-list-container">
+      <% @cafes.each do |cafe| %>
+        <%= render 'caves/card', cafe: cafe %>
+      <% end %>
+    </div>
+  </div>
+
 </div>
+
+
+
 

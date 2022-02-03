@@ -17,6 +17,7 @@ class CavesController < ApplicationController
 
   def index
     @cafes = Cafe.all
+    @categories = Category.all
   end
 
   def show
