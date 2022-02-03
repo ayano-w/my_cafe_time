@@ -27,6 +27,27 @@ h1{
 }
 h3{
   text-align: center;
+  background:
+	repeating-linear-gradient(
+		to top left,
+		beige 0,
+		beige 2em,
+		moccasin 2em,
+		moccasin 4em,
+		wheat 4em,
+		wheat 6em
+	),
+	repeating-linear-gradient(
+		to left,
+		white 0,
+		white 2em,
+		wheat 2em,
+		wheat 4em,
+		beige 4em,
+		beige 6em
+	), white;
+
+background-blend-mode: multiply;
 }
 
 .notice{
@@ -34,6 +55,7 @@ h3{
   font-weight:  bold;
 }
 
+// リンクの装飾
 .link{
   text-decoration: none;
   color: #bb5548 ;
@@ -60,8 +82,10 @@ h3{
 }
 .navbar{
   position: sticky;
+  // safariではstickyが使えない
   position: -webkit-sticky;
   top: 0;
+  z-index: 1;
 }
 
 // フッダー

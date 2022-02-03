@@ -1,13 +1,18 @@
 <div class="row p-3 mx-auto">
-  <h3><%= @user.name %>の投稿</h3>
+  <h3><%= @user.name %>のページ</h3>
 </div>
 
 <div class="row p-3 mx-auto">
+  <div class="col-md-4 col-10 mx-auto">
+    編集リンク
+  </div>
+  <div class="col-md-8 col-12">
+    <div class="card-list-container">
+      <% @cafes.each do |cafe| %>
+        <%= render 'caves/card', cafe: cafe %>
+      <% end %>
+    </div>
+  </div>
 </div>
 
-<div class="card-list-container">
-  <% @cafes.each do |cafe| %>
-    <%= render 'caves/card', cafe: cafe %>
-  <% end %>
-</div>
 

@@ -16,7 +16,7 @@
 
         <!--ログインユーザーであれば編集/削除ボタン/いいね表示のみ、その他であればいいねボタンリンクを表示-->
         <div class="col-2 offset-5">
-        <% if (controller.action_name == "show") && (cafe.user_id == current_user.id) %>
+        <% if (controller.controller_name == "caves") && (controller.action_name == "show") && (cafe.user_id == current_user.id) %>
           <p class="m-0"><%= cafe.favorites.count %>いいね</p>
           <%= link_to edit_cafe_path(cafe), class: "link p-1" do %>
             <i class="fas fa-edit"></i>
@@ -25,7 +25,7 @@
             <i class="fas fa-trash-alt"></i>
           <% end %>
 
-        <% elsif (controller.action_name == "index") && (cafe.user_id == current_user.id) %>
+        <% elsif ((controller.action_name == "index")||(controller.controller_name == "users"))&& (cafe.user_id == current_user.id) %>
           <p class="m-0"><%= cafe.favorites.count %>いいね</p>
 
         <% else %>
@@ -39,7 +39,7 @@
         <div class="col-3">
           <p class="m-1"><i class="fas fa-user"></i> <%= cafe.user.name %></p>
         </div>
-        <% if (controller.action_name == "show") %>
+        <% if (controller.controller_name == "caves") && (controller.action_name == "show") %>
         <div class="col-8">
           <%= cafe.comment %>
         </div>
