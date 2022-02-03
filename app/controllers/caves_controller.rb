@@ -16,8 +16,14 @@ class CavesController < ApplicationController
   end
 
   def index
-    @cafes = Cafe.all
+    @caves = Cafe.all.order("id DESC")
     @categories = Category.all
+
+    # カテゴリーidを受け取って、カテゴリーごとに表示させる
+    if params[:category_id].present?
+      category = Category.find(params[:category_id])
+      @caves = category.caves.order("id DESC")
+    end
   end
 
   def show

@@ -1,8 +1,5 @@
-  
-  
-  
-  
-  
-      <div class="col-md-8 col-4 mr-auto py-2">おうちでかふぇ</div>
-      <div class="col-md-8 col-4 mr-auto">アウトドアでカフェ</div>
-      <div class="col-md-8 col-4 mr-auto">仕事でカフェ</div>
+  <% categories.each do |category| %>
+    <div class="col-lg-8 col-3 mr-auto py-2">
+      <%= link_to category.category, caves_path(category_id: category.id), class: "link" %>
+    </div>
+  <% end %>
