@@ -1,5 +1,5 @@
 <% if cafe.favorited_by?(current_user) %>
-  <%= link_to cafe.favorites.count, cafe_favorite_path(cafe, current_user.favorites.find_by(cafe: cafe)), method: :delete, remote: true, class: "fas fa-heart heart_red" %>
+  <%= link_to cafe.favorites.count, cafe_favorite_path(cafe, current_user.favorites.find_by(cafe: cafe)), method: :delete, remote: true, class: "fas fa-heart heart_link" %>
 <% else %>
-  <%= link_to cafe.favorites.count, cafe_favorites_path(cafe), method: :post, remote: true, class: "fas fa-heart heart_blue" %>
+  <%= link_to cafe.favorites.count, cafe_favorites_path(cafe), method: :post, remote: true, class: "far fa-heart heart_link" %>
 <% end %>
