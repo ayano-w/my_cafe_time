@@ -1,14 +1,13 @@
 <div class="row p-5 mx-auto">
   <h3>癒しのカフェタイムを共有しましょう
-    <small>
       <i class="fas fa-coffee"></i><i class="fas fa-cookie-bite"></i>
-    </small>
   </h3>
 </div>
 <div class="row p-3 mx-auto">
-  <span class="top">
-  お気に入りを見つけて、自分のカフェ時間の参考にしてみましょう
-  </span>
+  <p class="text-center">
+    おすすめの飲み物、お供、便利グッズなどのこだわりを投稿しましょう<br>
+    お気に入りを見つけて、自分のカフェ時間の参考にしてみましょう
+  </p>
 </div>
 
 <!--ログイン：投稿ボタン、　未ログイン：ログイン・新規登録ボタン-->
@@ -19,4 +18,21 @@
     <%= link_to 'ログイン', new_user_session_path, method: :get, class: "btn btn-secondary col-md-7 m-3 mx-auto"%>
     <%= link_to '新規登録', new_user_registration_path, method: :get, class: "btn btn-secondary col-md-7 m-3 mx-auto" %>
   <% end %>
+</div>
+
+<div class="row p-3 mx-auto">
+  <div class="col-10 col-lg-7 mx-auto">
+    <p class="border-bottom font-weight-bold fw-bold">投稿について</p>
+    <p><i class="fas fa-coffee"></i>・・・ドリンク　<i class="fas fa-cookie-bite"></i>・・・ドリンクのお供</p>
+    <p><i class="fas fa-comment"></i>・・・こだわり・ポイントを伝えましょう</p>
+    <p><i class="fas fa-heart"></i>・・・自分以外の投稿でお気に入りを見つけたら、”いいね”をしましょう</p>
+
+    <p class="border-bottom fw-bold pt-3">カテゴリーについて</p>
+    <p><i class="fas fa-home"></i>・・・家でのまったりカフェ時間</p>
+    <p><i class="fas fa-mountain"></i>・・・山や海でのアクティブカフェ時間</p>
+    <p><i class="fas fa-desktop"></i>・・・仕事の隙間でリフレッシュしたときのカフェ時間。</p>
+
+
+
+  </div>
 </div>
