@@ -4,15 +4,11 @@
     <div class="row p-1 mx-auto text-center border-bottom">
       <h5>カテゴリー</h5>
     </div>
+    <!--カテゴリーごとのindex表示リンク-->
     <div class="row">
-      <div class="col-md-8 col-4 mr-auto py-2">おうちでかふぇ</div>
-      <div class="col-md-8 col-4 mr-auto">アウトドアでカフェ</div>
-      <div class="col-md-8 col-4 mr-auto">仕事でカフェ</div>
+      <%= render 'category_search', categories: @categories %>
     </div>
-
   </div>
-
-
 
 <!--ユーザーの投稿一覧-->
   <div class="col-lg-9 col-12">
