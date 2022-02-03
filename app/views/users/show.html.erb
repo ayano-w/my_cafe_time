@@ -1,16 +1,23 @@
 <div class="row p-3 mx-auto">
-  <div class="col-lg-3 col-10 mx-auto">
-    <div class="row my-5 mx-auto">
 
-      <div class="row p-3 mx-auto text-center">
-        <h5><%= @user.name %> のページ</h5>
-      </div>
-      <!--ログインユーザーと同じであれば、編集・削除ボタンを表示する-->
-      <% if @user.id == current_user.id %>
-        <%= render 'edit', user: @user %>
-      <% end %>
+  <div class="col-lg-3 col-10 mx-auto mt-5">
+    <div class="row p-3 mx-auto text-center">
+      <h5><%= @user.name %> のページ</h5>
     </div>
+
+    <!--投稿ボタン-->
+    <div class="row p-3 mx-auto text-center border-top">
+      <%= link_to '投稿する', new_cafe_path, class: "btn btn-light mx-auto" %>
+    </div>
+
+    <!--ログインユーザーと同じであれば、編集・削除ボタンを表示する-->
+    <% if @user.id == current_user.id %>
+      <%= render 'edit', user: @user %>
+    <% end %>
+
   </div>
+
+<!--ユーザーの投稿一覧-->
   <div class="col-lg-9 col-12">
     <div class="card-list-container">
       <% @cafes.each do |cafe| %>
@@ -18,6 +25,7 @@
       <% end %>
     </div>
   </div>
+
 </div>
 
 

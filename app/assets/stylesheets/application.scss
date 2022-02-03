@@ -46,7 +46,7 @@ h3{
 // いいねボタン
 .heart_link{
   text-decoration: none;
-  color: #946c45 ;
+  color: #e73562 ;
 }
 .heart_link:hover{
   color: #caac71 ;
@@ -154,5 +154,14 @@ background-blend-mode: multiply;
 .btn-secondary:hover{
   background-color: #e8c59c;
   border-color: #c49a6a;
+  color: #946c45;
+}
+.btn-light{
+  color: #c49a6a;
+  border: double 4px #67c5ff;
+  border-radius: 3px;
+  border-color: #c49a6a;
+}
+.btn-light:hover{
   color: #946c45;
 }

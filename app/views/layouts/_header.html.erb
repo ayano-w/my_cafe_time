@@ -11,7 +11,6 @@
         <li class="navbar-item">
           <%= link_to 'マイページ', user_path(current_user), class: 'nav-link active' %>
         </li>
-        <% end %>
 
         <li class="navbar-item">
           <%= link_to 'おうちでカフェ', caves_path, class: 'nav-link active' %>
@@ -22,6 +21,7 @@
         <li class="navbar-item">
           <%= link_to '仕事でカフェ', caves_path, class: 'nav-link active' %>
         </li>
+        <% end %>
       </ul>
 
       <ul class="navbar-nav d-flex ms-auto">
@@ -36,6 +36,10 @@
         <li class="navbar-item pe-5">
           <%= link_to 'ログイン', new_user_session_path, method: :get, class: "nav-link active" %>
         </li>
+        <li class="navbar-item pe-5">
+          <%= link_to '新規登録', new_user_registration_path, method: :get, class: "nav-link active" %>
+        </li>
+
       <% end %>
       </ul>
     </div>

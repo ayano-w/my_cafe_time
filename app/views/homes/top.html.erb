@@ -11,8 +11,12 @@
   </span>
 </div>
 
+<!--ログイン：投稿ボタン、　未ログイン：ログイン・新規登録ボタン-->
 <div class="row p-3 mx-auto">
-  <%= link_to new_cafe_path, class: "btn btn-light" do %>
-    投稿する
+  <% if user_signed_in? %>
+    <%= link_to '投稿する', new_cafe_path, class: "btn btn-light col-md-6 mx-auto" %>
+  <% else %>
+    <%= link_to 'ログイン', new_user_session_path, method: :get, class: "btn btn-secondary col-md-7 m-3 mx-auto"%>
+    <%= link_to '新規登録', new_user_registration_path, method: :get, class: "btn btn-secondary col-md-7 m-3 mx-auto" %>
   <% end %>
 </div>
