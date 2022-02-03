@@ -10,24 +10,33 @@
           <p class="m-1"><i class="fas fa-cookie-bite"></i> <%= cafe.teacake %></p>
         </div>
 
-        <!--ログインユーザーであれば編集ボタン、他人であればいいねボタンを表示-->
+        <!--ログインユーザーであれば編集/削除ボタン/いいね表示のみ、その他であればいいねボタンリンクを表示-->
         <div class="col-2 offset-5">
         <% if (controller.action_name == "show") && (cafe.user_id == current_user.id) %>
-          <%= link_to edit_cafe_path(cafe), class: "link" do %>
-            <i class="fas fa-edit"></i>編集
+          <p class="m-0"><%= cafe.favorites.count %>いいね</p>
+          <%= link_to edit_cafe_path(cafe), class: "link p-1" do %>
+            <i class="fas fa-edit"></i>
           <% end %>
+          <%= link_to cafe_path(cafe), method: :delete, class: "link p-1", data: { confirm: "投稿を削除してもよろしいですか？" } do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+
+        <% elsif (controller.action_name == "index") && (cafe.user_id == current_user.id) %>
+          <p class="m-0"><%= cafe.favorites.count %>いいね</p>
+
         <% else %>
           <span id="cafe_<%= cafe.id %>"><%= render "favorites/favorite_btn", cafe: cafe %></span>
         <% end %>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-4">
+      <!--カード下部のコメント表示-->
+      <div class="row border-top">
+        <div class="col-3">
           <p class="m-1"><i class="fas fa-user"></i> <%= cafe.user.name %></p>
         </div>
         <% if (controller.action_name == "show") %>
-        <div class="col-7">
+        <div class="col-8">
           <%= cafe.comment %>
         </div>
         <% end %>
