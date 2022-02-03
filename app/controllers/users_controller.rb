@@ -11,10 +11,9 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to user_path(@user.id), notice: 'ユーザー情報を更新しました'
     else
-      redirect_to edit_user_path(@user.id)
+      redirect_to user_path(@user.id), notice: '更新に失敗しました'
     end
   end
-
 
   def destroy
     @user.destroy

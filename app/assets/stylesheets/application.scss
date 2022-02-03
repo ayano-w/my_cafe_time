@@ -27,6 +27,34 @@ h1{
 }
 h3{
   text-align: center;
+}
+
+.notice{
+  background-color: #fffff9;
+  font-weight:  bold;
+}
+
+// リンクの装飾
+.link{
+  text-decoration: none;
+  color: #7a99cf;
+}
+.link:hover {
+  color: #a2c2e6;
+}
+
+// いいねボタン
+.heart_link{
+  text-decoration: none;
+  color: #946c45 ;
+}
+.heart_link:hover{
+  color: #caac71 ;
+}
+
+// ヘッダー関連
+.title{
+  text-align: center;
   background:
 	repeating-linear-gradient(
 		45deg,
@@ -66,36 +94,6 @@ h3{
 background-blend-mode: multiply;
 }
 
-.notice{
-  background-color: #fffff9;
-  font-weight:  bold;
-}
-
-// リンクの装飾
-.link{
-  text-decoration: none;
-  color: #bb5548 ;
-}
-.link:hover {
-  color: #e3acae;
-}
-
-// いいねボタン
-.heart_link{
-  text-decoration: none;
-  color: #946c45 ;
-}
-.heart_link:hover{
-  color: #caac71 ;
-}
-
-
-// ヘッダー関連
-.title_link{
-  text-decoration: none;
-  color: #98605e ;
-  bottom: 0;
-}
 .navbar{
   position: sticky;
   // safariではstickyが使えない
@@ -144,4 +142,17 @@ background-blend-mode: multiply;
 }
 .card {
   background-color: #fffff9;
+}
+
+
+// ボタン
+.btn-secondary{
+  background-color: #c49a6a;
+  border-color: #c49a6a;
+  color: #f8f4e6;
+}
+.btn-secondary:hover{
+  background-color: #e8c59c;
+  border-color: #c49a6a;
+  color: #946c45;
 }
