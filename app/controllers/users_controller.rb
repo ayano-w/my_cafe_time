@@ -7,9 +7,6 @@ class UsersController < ApplicationController
     @cafes = Cafe.where(user_id: params[:id]).order("id DESC")
   end
 
-  def edit
-  end
-
   def update
     if @user.update(user_params)
       redirect_to user_path(@user.id), notice: 'ユーザー情報を更新しました'
