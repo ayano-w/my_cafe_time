@@ -1,5 +1,6 @@
 class CavesController < ApplicationController
   before_action :set_cafe, except:[:new, :create, :index]
+  before_action :ensure_correct_user, only:[:edit, :update, :destroy]
 
   def new
     @cafe = Cafe.new
@@ -46,4 +47,12 @@ class CavesController < ApplicationController
   def set_cafe
     @cafe = Cafe.find(params[:id])
   end
+
+  def ensure_correct_user
+    cafe = Cafe.find(params[:id])
+    unless cafe.user.id == current_user.id
+      redirect_to root_path, notice: "他ユーザーの投稿を編集・削除することはできません"
+    end
+  end
+
 end

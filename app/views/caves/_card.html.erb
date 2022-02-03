@@ -34,10 +34,12 @@
         </div>
       </div>
 
-      <!--カード下部のコメント表示-->
+      <!--カード下部の名前・コメント表示-->
       <div class="row border-top">
         <div class="col-3">
-          <p class="m-1"><i class="fas fa-user"></i> <%= cafe.user.name %></p>
+          <%= link_to user_path(cafe.user), class: "link" do %>
+            <p class="m-1"><i class="fas fa-user"></i> <%= cafe.user.name %></p>
+          <% end %>
         </div>
         <% if (controller.controller_name == "caves") && (controller.action_name == "show") %>
         <div class="col-8">

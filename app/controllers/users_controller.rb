@@ -30,7 +30,8 @@ class UsersController < ApplicationController
   end
 
   def ensure_correct_user
-    unless @user.id == current_user.id
+    user = User.find(params[:id])
+    unless user.id == current_user.id
       redirect_to root_path, notice: "他ユーザーを編集・削除することはできません"
     end
   end

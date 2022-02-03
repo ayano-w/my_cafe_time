@@ -7,9 +7,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
+        <% if user_signed_in? %>
         <li class="navbar-item">
           <%= link_to 'マイページ', user_path(current_user), class: 'nav-link active' %>
         </li>
+        <% end %>
+
         <li class="navbar-item">
           <%= link_to 'おうちでカフェ', caves_path, class: 'nav-link active' %>
         </li>
