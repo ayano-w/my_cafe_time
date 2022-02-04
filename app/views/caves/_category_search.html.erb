@@ -1,5 +1,5 @@
   <% categories.each do |category| %>
-    <div class="col-lg-8 col-3 mr-auto py-2">
+    <div class="col-lg-8 col-3 mr-lg-auto py-lg-2 px-0">
       <%= link_to category.category, caves_path(category_id: category.id), class: "link" %>
     </div>
   <% end %>

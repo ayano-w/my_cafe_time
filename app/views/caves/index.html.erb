@@ -1,14 +1,14 @@
 <div class="row p-3 mx-auto">
 
-  <div class="col-lg-3 col-10 mx-auto mt-5">
+  <div class="col-lg-3 col-12 mx-auto mt-5 category_fixed">
     <div class="row p-1 mx-auto text-center border-bottom">
       <h5>カテゴリー</h5>
     </div>
     <!--カテゴリーごとのindex表示リンク-->
     <div class="row">
       <%= render 'category_search', categories: @categories %>
-      <div class="col-lg-8 col-3 mr-auto py-2">
-        <%= link_to 'すべて', caves_path, class: 'link' %>
+      <div class="col-lg-8 col-3 mr-lg-auto py-lg-2 px-0">
+        <%= link_to 'すべての投稿', caves_path, class: 'link' %>
       </div>
     </div>
   </div>
