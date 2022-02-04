@@ -20,10 +20,7 @@
       <ul class="navbar-nav d-flex ms-auto">
       <% if user_signed_in? %>
         <li class="navbar-item my-auto px-3">
-          ログイン中: <%= current_user.name %>さん
-        </li>
-        <li class="navbar-item pe-5">
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-link active" %>
+          <%= current_user.name %>さん
         </li>
       <% else %>
         <li class="navbar-item pe-5">

@@ -38,6 +38,7 @@ h3{
 .link{
   text-decoration: none;
   color: #7a99cf;
+  font-weight:  bold;
 }
 .link:hover {
   color: #a2c2e6;
@@ -142,18 +143,22 @@ background-blend-mode: multiply;
   background-color: #c49a6a;
   border-color: #c49a6a;
   color: #f8f4e6;
+  font-weight:  bold;
 }
 .btn-secondary:hover{
   background-color: #e8c59c;
   border-color: #c49a6a;
   color: #946c45;
+  font-weight:  bold;
 }
 .btn-light{
   color: #c49a6a;
   border: double 4px #67c5ff;
   border-radius: 3px;
   border-color: #c49a6a;
+  font-weight:  bold;
 }
 .btn-light:hover{
   color: #946c45;
+  font-weight:  bold;
 }
