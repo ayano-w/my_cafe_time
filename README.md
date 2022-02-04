@@ -1,24 +1,40 @@
-# README
+#  my cafe time
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+日々の癒しのカフェ時間を共有、お気に入りを見つけて自分のカフェ時間を充実させるためのSNS。<br>
+カテゴリ毎、ユーザー毎に投稿一覧を表示してお気に入りを探しやすくしています。
 
-Things you may want to cover:
 
-* Ruby version
+### テーマを選んだ理由
+コロナ化で外出自粛となり、以前よりも家にいる時間が長くなったとき、
+お気に入りのお茶、お菓子、コップなどに囲まれたカフェ時間が癒しでした。また、アウトドアに出かけたときに外で楽しむカフェ時間、
+仕事の合間に少しだけ飲むお茶の時間も、日々の癒しで大切な時間でした。
+そんな時間をもっと充実させるため、カフェ好きのためのアプリを作成しようと考えました。
 
-* System dependencies
 
-* Configuration
+### ターゲットユーザ
+ドリンクとお供でくつろぐ時間が好きな人
 
-* Database creation
+### 主な利用シーン
+- 自分のカフェ時間を共有したいと思ったとき
+- 他の人のカフェ時間を見て癒されたいとき
+- カフェ時間のレパートリーを増やしたいとき
 
-* Database initialization
+### 機能
+- 投稿：写真、ドリンク、ドリンクのお供、こだわり・アピールポイント
+- 閲覧：カテゴリ毎、ユーザー毎の一覧表示。投稿詳細ページでコメントを確認
 
-* How to run the test suite
+### テストユーザー
+ユーザー|アドレス|パスワード
+---|---|---
+test1|test1@test1|password
 
-* Services (job queues, cache servers, search engines, etc.)
+###公開URL
+http://my-cafe-time.net/
 
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
