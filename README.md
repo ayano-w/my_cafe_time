@@ -29,7 +29,7 @@
 ---|---|---
 test1|test1@test1|password
 
-###　公開URL
+### 公開URL
 http://my-cafe-time.net/
 
 ## 開発環境
