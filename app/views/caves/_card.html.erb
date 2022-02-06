@@ -38,7 +38,9 @@
       <div class="row border-top">
         <div class="col-3">
           <%= link_to user_path(cafe.user), class: "link" do %>
-            <p class="m-1"><i class="fas fa-user"></i> <%= cafe.user.name %></p>
+            <p class="m-1"><%= attachment_image_tag cafe.user, :profile_image, :fill, 30, 30, fallback: "no_image_square.jpg", size:'30x30', class:"rounded-circle"%>
+              <%= cafe.user.name %>
+            </p>
           <% end %>
         </div>
         <% if (controller.controller_name == "caves") && (controller.action_name == "show") %>

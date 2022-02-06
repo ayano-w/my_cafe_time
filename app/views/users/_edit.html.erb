@@ -15,6 +15,12 @@
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
     </div>
 
+    <div class="form-grop p-2">
+      <%= f.label :profile_image_id, 'プロフィール画像' %><br />
+      <%= f.attachment_field :profile_image, class: "form-control" %>
+    </div>
+
+
     <div class="form-grop p-3 d-grid gap-2">
       <%= f.submit "更新", class: "btn btn-secondary" %>
     </div>
@@ -24,7 +30,7 @@
 
 <div class="row m-3 mx-auto">
   <%= link_to destroy_user_session_path, method: :delete, class: "link" do %>
-  <i class="fas fa-door-open"></i>ログアウト
+  <i class="fas fa-sign-out-alt"></i>ログアウト
   <% end %>
 </div>
 
