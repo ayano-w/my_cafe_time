@@ -38,7 +38,12 @@
       <div class="row border-top">
         <div class="col-3">
           <%= link_to user_path(cafe.user), class: "link" do %>
-            <p class="m-1"><%= attachment_image_tag cafe.user, :profile_image, :fill, 30, 30, fallback: image_url("coffee_2.jpg"), size:'30x30', class:"rounded-circle"%>
+            <p class="m-1">
+              <% if cafe.user.profile_image.present? %>
+                <%= attachment_image_tag cafe.user, :profile_image, :fill, 30, 30, class:"rounded-circle"%>
+              <% else %>
+                <%= image_tag asset_path('coffee_2.jpg'), size:'30x30', class:"rounded-circle" %>
+              <% end %>
               <%= cafe.user.name %>
             </p>
           <% end %>
