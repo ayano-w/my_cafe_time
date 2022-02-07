@@ -2,7 +2,7 @@
 
   <div class="col-lg-3 col-10 mx-auto mt-5">
     <div class="row p-3 mx-auto text-center">
-      <p><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "coffee_2.jpg", size:'100x100', class:"mt-3 rounded-circle"%></p>
+      <p><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: image_url("coffee_2.jpg"), size:'100x100', class:"mt-3 rounded-circle"%></p>
       <h6><%= @user.name %></h6>
     </div>
 
