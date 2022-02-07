@@ -42,7 +42,7 @@
               <% if cafe.user.profile_image.present? %>
                 <%= attachment_image_tag cafe.user, :profile_image, :fill, 30, 30, class:"rounded-circle"%>
               <% else %>
-                <%#= image_tag asset_path('coffee_2.jpg'), size:'30x30', class:"rounded-circle" %>
+                <%= image_tag asset_path('coffee_2.jpg'), size:'30x30', class:"rounded-circle" %>
               <% end %>
               <%= cafe.user.name %>
             </p>

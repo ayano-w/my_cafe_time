@@ -3,11 +3,10 @@
   <div class="col-lg-3 col-10 mx-auto mt-5">
     <div class="row p-3 mx-auto text-center">
       <p>
-        <%#= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: image_url("coffee_2.jpg"), size:'100x100', class:"mt-3 rounded-circle"%>
         <% if @user.profile_image.present? %>
           <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, class:"rounded-circle"%>
         <% else %>
-          <%#= image_tag asset_path('coffee_2.jpg'), size:'100x100', class:"rounded-circle" %>
+          <%= image_tag asset_path('coffee_2.jpg'), size:'100x100', class:"rounded-circle" %>
         <% end %>
       </p>
       <h6><%= @user.name %></h6>
