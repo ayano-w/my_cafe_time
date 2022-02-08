@@ -54,20 +54,27 @@
         </div>
         <% end %>
       </div>
-      <%= render 'caves/comment' %>
 
-      <!--コメント投稿機能-->
-      <div class="row">
-        <%= form_with model:[cafe,comment], local:true do |f| %>
-          <div class="row">
-          <%= f.label :comment, "投稿へのコメント" %>
-          <%= f.text_area :comment, class: "form-control" %>
-          </div>
-          <div class="row d-flex justify-content-end">
-          <%= f.submit '投稿', class: "btn btn-sm btn-secondary col-3 p-1" %>
-          </div>
+      <% if (controller.controller_name == "caves") && (controller.action_name == "show") %>
+        <!--投稿に対するコメント表示-->
+        <% comments.each do |comment| %>
+          <%= render 'caves/comment', comment: comment %>
         <% end %>
-      </div>
+
+        <!--コメント投稿機能-->
+        <div class="row">
+          <%= form_with model:[cafe,comment], local:true do |f| %>
+            <div class="row">
+            <%= f.label :comment, "コメント(100字以内)" %>
+            <%= f.text_area :comment, class: "form-control" %>
+            </div>
+            <div class="row d-flex justify-content-end">
+            <%= f.hidden_field :cafe_id, value: params[:id] %>
+            <%= f.submit '投稿', class: "btn btn-sm btn-secondary col-3 p-1" %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     </div>
 
   </div>
