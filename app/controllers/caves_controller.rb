@@ -27,6 +27,8 @@ class CavesController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = Comment.where(cafe_id: params[:id])
   end
 
   def edit
