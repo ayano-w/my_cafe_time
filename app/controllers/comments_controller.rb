@@ -10,6 +10,9 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to cafe_path(params[:cafe_id])
   end
 
 
