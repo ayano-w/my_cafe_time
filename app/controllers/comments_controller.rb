@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :ensure_correct_user, only:[:destroy]
 
   def create
     @comment = current_user.comments.new(comment_params)
@@ -20,5 +21,14 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:comment, :cafe_id, :user_id)
   end
+
+  def ensure_correct_user
+    cafe = Cafe.find(params[:cafe_id])
+    comment = Comment.find(params[:id])
+    unless comment.user == (current_user || cafe.user)
+      redirect_to root_path, notice: "他ユーザーの投稿を削除することはできません"
+    end
+  end
+
 
 end
