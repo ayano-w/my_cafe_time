@@ -61,7 +61,7 @@
 
         <!--コメント投稿機能-->
         <div class="row">
-          <%= form_with model:[cafe,comment], remote:true do |f| %>
+          <%= form_with model:[cafe,comment], remote: true do |f| %>
             <div class="row">
             <%= f.label :comment, "コメント(100字以内)" %>
             <%= f.text_area :comment, class: "form-control" %>
