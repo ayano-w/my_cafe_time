@@ -57,9 +57,7 @@
 
       <% if (controller.controller_name == "caves") && (controller.action_name == "show") %>
         <!--投稿に対するコメント表示-->
-        <% comments.each do |comment| %>
-          <span id="comment_<%= comment.id %>"><%= render 'caves/comment', comment: comment, cafe: cafe %></span>
-        <% end %>
+          <span id="comment_show"><%= render 'caves/comment', comments: comments, cafe: cafe %></span>
 
         <!--コメント投稿機能-->
         <div class="row">

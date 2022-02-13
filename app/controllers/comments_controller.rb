@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = current_user.comments.new(comment_params)
+    @comments = Comment.where(cafe_id: params[:cafe_id])
     if @comment.save
     else
       redirect_to cafe_path(params[:cafe_id]), notice: "100文字以内で投稿してください"

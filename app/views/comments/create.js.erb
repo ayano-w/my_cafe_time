@@ -1,1 +1,2 @@
-$('#comment_<%= @comment.id %>').html("<%= j(render 'caves/comment', comment: @comment, cafe: @cafe) %>");
+$('#comment_show').html("<%= j(render 'caves/comment', comments: @comments, cafe: @cafe) %>");
+$("textarea").val('');
